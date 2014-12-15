@@ -15,10 +15,11 @@ void ofApp::update(){
 }
 
 //--------------------------------------------------------------
+//Create a circle of radius 30 at mouse touch, with a random color fill
 void ofApp::draw(){
     ofEnableAlphaBlending();
     if(lastTouch.x!=0 && lastTouch.y!=0){
-        ofSetColor(114,176,140);
+        ofSetColor(ofRandom(255),ofRandom(255),ofRandom(255));
         ofFill();
         ofCircle(lastTouch.x,lastTouch.y, 30);
     }
